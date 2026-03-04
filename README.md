@@ -10,22 +10,6 @@ To ensure the video loads instantly as requested, place your video file in this 
 *   **Target Size:** Aim for under **5-10MB**.
 *   **Format:** H.264 or HEVC (H.265) for maximum compatibility.
 
-### 2. Configure WhatsApp
-Open `index.html` and scroll to the bottom. Replace the placeholder number with your actual business number:
-```javascript
-const whatsappNumber = "35799000000"; // Replace with your number (no + or 00)
-```
-
-### 3. Deploy to Firebase
-This site is a pure static site with no build steps. To host on Firebase:
-1.  Install Firebase CLI: `npm install -g firebase-tools`
-2.  Login: `firebase login`
-3.  Initialize: `firebase init hosting`
-    *   *Public Directory:* `.` (current directory)
-    *   *Configure as SPA:* No
-    *   *GitHub Deploys:* No
-4.  Deploy: `firebase deploy`
-
 ## 🛠 Tech Stack
 *   **HTML5 / CSS3**
 *   **Tailwind CSS (via CDN):** For rapid styling without build steps.
