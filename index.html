@@ -3,8 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Konarskis Clean Slopes | Zero-Waste Remote Mulching Cyprus</title>
     <meta name="description" content="Silent, electric, zero-waste remote mulching for slopes, banks, and plots in Paphos & across Cyprus. Professional fire-break clearing for resorts, golf courses, and estates.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://cleanslopes.com/">
     
     <!-- Open Graph / Social Media -->
     <meta property="og:type" content="website">
@@ -118,9 +121,13 @@
     </style>
 </head>
 <body class="bg-slate-50 text-slate-900 antialiased pt-16">
+    <!-- Skip to Main Content (A11y) -->
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:z-[100] focus:bg-white focus:p-4 focus:shadow-xl focus:rounded-b-xl focus:text-emerald-900 focus:font-bold focus:outline-none focus:ring-2 focus:ring-emerald-700">
+        Skip to main content
+    </a>
 
     <!-- Navigation -->
-    <nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-slate-200">
+    <nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-slate-200" role="navigation" aria-label="Main Navigation">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16 items-center">
                 <div class="flex-shrink-0 flex items-center">
@@ -130,17 +137,18 @@
                     <a href="#benefits" class="text-slate-600 hover:text-emerald-800 transition">Benefits</a>
                     <a href="#services" class="text-slate-600 hover:text-emerald-800 transition">Services</a>
                     <a href="#pricing" class="text-slate-600 hover:text-emerald-800 transition">Pricing</a>
-                    <a href="#quote" class="bg-emerald-700 text-white px-5 py-2 rounded-full hover:bg-emerald-800 transition shadow-sm">Quote</a>
+                    <a href="#quote" class="bg-emerald-700 text-white px-5 py-2 rounded-full hover:bg-emerald-800 transition shadow-sm" aria-label="Get a Quote for Land Cleaning">Quote</a>
                 </div>
                 <div class="md:hidden flex items-center">
-                    <a href="#quote" class="bg-emerald-700 text-white px-4 py-2 rounded-full text-sm font-medium">Quote</a>
+                    <a href="#quote" class="bg-emerald-700 text-white px-4 py-2 rounded-full text-sm font-medium" aria-label="Get a Quote">Quote</a>
                 </div>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero-video-container flex items-center justify-center text-center text-white px-4">
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section class="hero-video-container flex items-center justify-center text-center text-white px-4">
         <!-- Replace 'video.mp4' with your actual video path -->
         <video id="hero-video" autoplay muted loop playsinline poster="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1920&q=80">
             <source src="video.mp4" type="video/mp4">
@@ -425,22 +433,22 @@
             <form id="quote-form" class="space-y-6">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                        <label class="block text-sm font-medium text-emerald-100 mb-2">Name</label>
-                        <input type="text" id="name" required class="w-full px-4 py-3 bg-emerald-800/50 border border-emerald-700 rounded-lg focus:ring-2 focus:ring-emerald-400 outline-none text-white placeholder-emerald-300/50" placeholder="John Doe">
+                        <label for="name" class="block text-sm font-medium text-emerald-100 mb-2">Name</label>
+                        <input type="text" id="name" name="name" required class="w-full px-4 py-3 bg-emerald-800/50 border border-emerald-700 rounded-lg focus:ring-2 focus:ring-emerald-400 outline-none text-white placeholder-emerald-300/50" placeholder="John Doe">
                     </div>
                     <div>
-                        <label class="block text-sm font-medium text-emerald-100 mb-2">Phone / WhatsApp</label>
-                        <input type="tel" id="phone" required class="w-full px-4 py-3 bg-emerald-800/50 border border-emerald-700 rounded-lg focus:ring-2 focus:ring-emerald-400 outline-none text-white placeholder-emerald-300/50" placeholder="+357 99 000 000">
+                        <label for="phone" class="block text-sm font-medium text-emerald-100 mb-2">Phone / WhatsApp</label>
+                        <input type="tel" id="phone" name="phone" required class="w-full px-4 py-3 bg-emerald-800/50 border border-emerald-700 rounded-lg focus:ring-2 focus:ring-emerald-400 outline-none text-white placeholder-emerald-300/50" placeholder="+357 99 000 000">
                     </div>
                 </div>
                 <div>
-                    <label class="block text-sm font-medium text-emerald-100 mb-2">Google Maps Pin / Link</label>
-                    <input type="text" id="maps_link" required class="w-full px-4 py-3 bg-emerald-800/50 border border-emerald-700 rounded-lg focus:ring-2 focus:ring-emerald-400 outline-none text-white placeholder-emerald-300/50" placeholder="Paste Google Maps link here">
+                    <label for="maps_link" class="block text-sm font-medium text-emerald-100 mb-2">Google Maps Pin / Link</label>
+                    <input type="text" id="maps_link" name="maps_link" required class="w-full px-4 py-3 bg-emerald-800/50 border border-emerald-700 rounded-lg focus:ring-2 focus:ring-emerald-400 outline-none text-white placeholder-emerald-300/50" placeholder="Paste Google Maps link here">
                     <p class="mt-2 text-xs text-emerald-200/70 italic">Tip: Long press on your location in Google Maps to drop a pin, then share and copy link.</p>
                 </div>
                 <div>
-                    <label class="block text-sm font-medium text-emerald-100 mb-2">Approx. Square Meters (m²)</label>
-                    <input type="number" id="area" required class="w-full px-4 py-3 bg-emerald-800/50 border border-emerald-700 rounded-lg focus:ring-2 focus:ring-emerald-400 outline-none text-white placeholder-emerald-300/50" placeholder="e.g. 1200">
+                    <label for="area" class="block text-sm font-medium text-emerald-100 mb-2">Approx. Square Meters (m²)</label>
+                    <input type="number" id="area" name="area" required class="w-full px-4 py-3 bg-emerald-800/50 border border-emerald-700 rounded-lg focus:ring-2 focus:ring-emerald-400 outline-none text-white placeholder-emerald-300/50" placeholder="e.g. 1200">
                 </div>
                 <div class="flex flex-col sm:flex-row gap-4">
                     <button type="submit" id="whatsapp-btn" class="flex-1 bg-white text-emerald-900 py-4 rounded-xl text-lg font-bold hover:bg-emerald-50 transition shadow-xl active:transform active:scale-[0.98] flex items-center justify-center gap-2">
@@ -463,38 +471,39 @@
         </div>
     </section>
 
-    <!-- FAQ Section (SEO and AI Discovery) -->
-    <section id="faq" class="py-24 bg-white border-t border-slate-100">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold text-slate-900">Frequently Asked Questions</h2>
-                <p class="mt-4 text-slate-600">Common questions about land cleaning and mulching in Cyprus.</p>
+        <!-- FAQ Section (SEO and AI Discovery) -->
+        <section id="faq" class="py-24 bg-white border-t border-slate-100">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl font-bold text-slate-900">Frequently Asked Questions</h2>
+                    <p class="mt-4 text-lg text-slate-600">Common questions about land cleaning and mulching in Cyprus.</p>
+                </div>
+                
+                <div class="space-y-8">
+                    <!-- FAQ 1 -->
+                    <article class="bg-slate-50 p-6 rounded-2xl">
+                        <h3 class="font-bold text-lg text-slate-900 mb-2">What areas in Cyprus do you serve?</h3>
+                        <p class="text-slate-600">We are based in **Paphos** but provide our services across the entire island, including **Limassol, Nicosia, and Larnaca**. Paphos district cleaning includes free transport, while other areas incur a €0.60/km travel fee.</p>
+                    </article>
+                    <!-- FAQ 2 -->
+                    <article class="bg-slate-50 p-6 rounded-2xl">
+                        <h3 class="font-bold text-lg text-slate-900 mb-2">Is remote mulching effective on steep slopes?</h3>
+                        <p class="text-slate-600">Yes, our machines are specifically designed for steep terrain, maintaining safety on slopes where traditional tractors cannot operate. We can clear slopes and banks safely up to 70°.</p>
+                    </article>
+                    <!-- FAQ 3 -->
+                    <article class="bg-slate-50 p-6 rounded-2xl">
+                        <h3 class="font-bold text-lg text-slate-900 mb-2">How do you help with fire-break compliance?</h3>
+                        <p class="text-slate-600">We provide certified clearing that meets municipal fire-break requirements. Our silent, electric mulching ensures your plot is compliant before the May/June deadlines, helping you avoid municipal fines.</p>
+                    </article>
+                    <!-- FAQ 4 -->
+                    <article class="bg-slate-50 p-6 rounded-2xl">
+                        <h3 class="font-bold text-lg text-slate-900 mb-2">What happens to the waste after mulching?</h3>
+                        <p class="text-slate-600">Our service is **zero-waste**. We shred vegetation into a fine mulch layer that stays on your land, locking in moisture and feeding the soil. This eliminates landfill fees and the need for roadside burning.</p>
+                    </article>
+                </div>
             </div>
-            
-            <div class="space-y-8">
-                <!-- FAQ 1 -->
-                <div class="bg-slate-50 p-6 rounded-2xl">
-                    <h3 class="font-bold text-lg text-slate-900 mb-2">What areas in Cyprus do you serve?</h3>
-                    <p class="text-slate-600">We are based in **Paphos** but provide our services across the entire island, including **Limassol, Nicosia, and Larnaca**. Paphos district cleaning includes free transport, while other areas incur a €0.60/km travel fee.</p>
-                </div>
-                <!-- FAQ 2 -->
-                <div class="bg-slate-50 p-6 rounded-2xl">
-                    <h3 class="font-bold text-lg text-slate-900 mb-2">Is remote mulching effective on steep slopes?</h3>
-                    <p class="text-slate-600">Yes, our machines are specifically designed for steep terrain, maintaining safety on slopes where traditional tractors cannot operate. We can clear slopes and banks safely up to 70°.</p>
-                </div>
-                <!-- FAQ 3 -->
-                <div class="bg-slate-50 p-6 rounded-2xl">
-                    <h3 class="font-bold text-lg text-slate-900 mb-2">How do you help with fire-break compliance?</h3>
-                    <p class="text-slate-600">We provide certified clearing that meets municipal fire-break requirements. Our silent, electric mulching ensures your plot is compliant before the May/June deadlines, helping you avoid municipal fines.</p>
-                </div>
-                <!-- FAQ 4 -->
-                <div class="bg-slate-50 p-6 rounded-2xl">
-                    <h3 class="font-bold text-lg text-slate-900 mb-2">What happens to the waste after mulching?</h3>
-                    <p class="text-slate-600">Our service is **zero-waste**. We shred vegetation into a fine mulch layer that stays on your land, locking in moisture and feeding the soil. This eliminates landfill fees and the need for roadside burning.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <!-- Footer -->
     <footer class="py-12 bg-white border-t border-slate-200">
