@@ -1,0 +1,17 @@
+{
+  "name": "Konarskis Clean Slopes",
+  "short_name": "Clean Slopes",
+  "description": "Zero-Waste Remote Mulching Cyprus",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#065f46",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
