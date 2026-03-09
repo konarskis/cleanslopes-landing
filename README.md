@@ -5,10 +5,24 @@ This is a minimalistic, high-performance landing page for **Konarskis Clean Slop
 ## 🚀 Setup & Deployment
 
 ### 1. Add Your Video
-To ensure the video loads instantly as requested, place your video file in this directory and name it `video.mp4`.
-*   **Compression is Key:** Use a tool like [Handbrake](https://handbrake.fr/) or [FFmpeg](https://ffmpeg.org/) to compress the video.
-*   **Target Size:** Aim for under **5-10MB**.
-*   **Format:** H.264 or HEVC (H.265) for maximum compatibility.
+To ensure the video loads instantly as requested, we serve two versions: one for high-quality desktop viewing and a lightweight version for mobile.
+
+**1. High-Quality Desktop Video (`video-desktop.mp4`)**
+Best for large screens, uses 1080p resolution. Targeted at ~3Mbps to keep the file size under 25MB for a 1-minute loop.
+```bash
+ffmpeg -i video-original.mov -vcodec libx264 -b:v 3000k -maxrate 4000k -bufsize 6M -preset slow -pix_fmt yuv420p -an -vf "scale=1920:-2" -movflags +faststart video-desktop.mp4
+```
+
+**2. Lightweight Mobile Video (`video-mobile.mp4`)**
+Optimized for 3G/4G connections and smaller screens. Resized to 720p with a 1MB bitrate limit and 24fps.
+```bash
+ffmpeg -i video-original.mov -vcodec libx264 -b:v 1000k -maxrate 1500k -bufsize 2M -preset veryslow -pix_fmt yuv420p -an -r 24 -vf "scale=1280:-2" -movflags +faststart video-mobile.mp4
+```
+
+### Why these flags?
+*   **`-movflags +faststart`**: Moves the MOOV atom (metadata) to the front so the video starts playing while it's still downloading.
+*   **`-an`**: Removes the audio track to save significant file size (not needed for muted background loops).
+*   **`-pix_fmt yuv420p`**: Ensures compatibility with all mobile browsers (especially older iOS/Safari versions).
 
 ## 🛠 Tech Stack
 *   **HTML5 / CSS3**

@@ -29,49 +29,59 @@
 
     <!-- Structured Data (JSON-LD) for Google & AI -->
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "Konarskis Clean Slopes",
-      "image": "https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1920&q=80",
-      "url": "https://cleanslopes.com",
-      "telephone": "+31619181086",
-      "email": "rob@konarskis.com",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Paphos",
-        "addressCountry": "CY"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": "34.7754",
-        "longitude": "32.4245"
-      },
-      "areaServed": [
-        { "@type": "City", "name": "Paphos" },
-        { "@type": "City", "name": "Limassol" },
-        { "@type": "City", "name": "Nicosia" }
-      ],
-      "description": "Cyprus's first silent, zero-waste remote mulching service for steep slopes, banks, and hospitality grounds.",
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "Land Cleaning Services",
-        "itemListElement": [
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Konarskis Clean Slopes",
+        "image": "https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1920&q=80",
+        "url": "https://cleanslopes.com",
+        "telephone": "+31619181086",
+        "email": "rob@konarskis.com",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Paphos",
+          "addressCountry": "CY"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "34.7754",
+          "longitude": "32.4245"
+        },
+        "areaServed": [
           {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Quiet Mulching"
-            }
+            "@type": "City",
+            "name": "Paphos"
           },
           {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Fire-Break Compliance Clearing"
-            }
+            "@type": "City",
+            "name": "Limassol"
+          },
+          {
+            "@type": "City",
+            "name": "Nicosia"
           }
-        ]
+        ],
+        "description": "Cyprus's first silent, zero-waste remote mulching service for steep slopes, banks, and hospitality grounds.",
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Land Cleaning Services",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Quiet Mulching"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Fire-Break Compliance Clearing"
+              }
+            }
+          ]
+        }
       }
     </script>
 
@@ -174,9 +184,9 @@
     <main id="main-content">
         <!-- Hero Section -->
         <section class="hero-video-container flex items-center justify-center text-center text-white px-4 pt-20 md:pt-0">
-        <!-- Replace 'video.mp4' with your actual video path -->
-        <video id="hero-video" autoplay muted loop playsinline poster="video-cover.webp" width="1920" height="1080">
-            <source src="video.mp4" type="video/mp4">
+        <video id="hero-video" autoplay muted loop playsinline preload="auto" poster="video-cover.webp" width="1920" height="1080">
+            <source src="video-desktop.mp4" type="video/mp4" media="(min-width: 768px)">
+            <source src="video-mobile.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
         <div class="video-overlay bg-gradient-to-b from-black/60 via-black/40 to-slate-900/80"></div>
